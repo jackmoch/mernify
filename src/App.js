@@ -4,10 +4,14 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 
 
-var Test = React.createClass({
+const Test = React.createClass({
   render: function() {
     return (
-      <div>Testing Div</div>
+      <div>
+      	<div>
+      		<a href="/login">Login with Spotify</a>
+      	</div>
+      </div>
     )
   }
 });
@@ -16,5 +20,3 @@ ReactDOM.render(
   <Test />,
   document.getElementById('main')
 );
-
-console.log('test')
