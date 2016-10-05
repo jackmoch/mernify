@@ -13,7 +13,9 @@ gulp.task('jsx', () => {
 	const b = browserify({
 		entries: ['./src/App.js'],
 		extensions: ['.jsx'],
-		transform: babelify,
+		transform: babelify.configure({
+            presets: ["es2015", "react"]
+        }),
 		debug: true
 	})
 	return b.bundle()
